@@ -43,5 +43,9 @@ module.exports = function(environment) {
 
   }
 
+  ENV['ahoy'] = {
+    debug: true
+  }
+  
   return ENV;
 };
