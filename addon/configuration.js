@@ -1,7 +1,7 @@
 export default {
   debug: false,
-  visitsUrl: null,
-  eventsUrl: null,
+  visitsUrl: '/ahoy/visits',
+  eventsUrl: '/ahoy/events',
 
   load(config) {
     for(let property in this) {
