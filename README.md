@@ -1,26 +1,32 @@
-# Ember-ahoy
+# Ember Ahoy
 
-This README outlines the details of collaborating on this Ember addon.
+This Addon integrates your ember app with ahoy, a Visit and event tracking for JavaScript
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+Installing the library is as easy as:
 
-## Running
+* ember install ember-ahoy
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+## Usage
 
-## Running Tests
+To track a visit in a page use `track-page` helper
 
-* `npm test` (Runs `ember try:testall` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
+```
+{{!-- app/templates/home.hbs --}}
+{{track-page "Home"}}
 
-## Building
+...
+```
 
-* `ember build`
+## Configuration
 
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+Ember Ahoy is configured via the 'ember-ahoy' section in the application's config/environment.js file, e.g.:
+
+```
+ENV['ahoy'] = {
+  debug: environment === 'development',
+  visitsUrl: 'http://my.server.io/ahoy/visits',
+  eventsUrl: 'http://my.server.io/ahoy/events'
+};
+```

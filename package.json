@@ -1,7 +1,7 @@
 {
   "name": "ember-ahoy",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.0.1",
+  "description": "Integrates your ember app with ahoy, a Visit and event tracking for JavaScript",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -38,7 +38,11 @@
     "ember-try": "~0.0.8"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "analytics",
+    "tracking",
+    "locations",
+    "referral"
   ],
   "dependencies": {
     "ember-cli-babel": "^5.1.5"
