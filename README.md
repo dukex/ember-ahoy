@@ -10,13 +10,25 @@ Installing the library is as easy as:
 
 ## Usage
 
-To track a visit in a page use `track-page` helper
+To track a visit in a page you can use `track-page` helper:
 
-```
+``` handlebars
 {{!-- app/templates/home.hbs --}}
-{{track-page "Home"}}
+{{track-page "home"}}
 
 ...
+```
+
+To track view each transition extends 'application-route-mixin' in application route:
+
+``` javascript
+// app/routes/application.js
+import Ember from 'Ember';
+import AhoyApplicationRouteMiin from 'ember-ahoy/mixins/application-route-mixin';
+
+export default Ember.Route.extend(AhoyApplicationRouteMixin, {
+// ...
+});
 ```
 
 ## Configuration
