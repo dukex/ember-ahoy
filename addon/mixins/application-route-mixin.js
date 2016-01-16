@@ -11,11 +11,11 @@ import Ember from 'ember';
 */
 export default Ember.Mixin.create({
   actions: {
-    didTransition: function() {
+    didTransition() {
       Ember.run.once(this, function() {
-        const router = this.router;
+        const { router } = this;
         const properties = { url: router.get('url'), page: router.get('currentPath') };
-        window.ahoy.track("$view", properties);
+        window.ahoy.track('$view', properties);
       });
     }
   }

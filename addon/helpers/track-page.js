@@ -5,9 +5,11 @@ const { run } = Ember;
 export function trackPage(params) {
   run(() => {
     run.scheduleOnce('afterRender', () => {
-      const [ page, title=document.title, url=window.location.href ] = params;
+      let [ page, title, url ] = params;
+      url =  url || window.location.href;
+      title = title || document.title;
       const properties = { url, title, page };
-      window.ahoy.track("$view", properties);
+      window.ahoy.track('$view', properties);
     });
   });
 

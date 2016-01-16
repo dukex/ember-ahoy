@@ -4,8 +4,8 @@ export default {
   eventsUrl: '/ahoy/events',
 
   load(config) {
-    for(let property in this) {
-      if(config[property]) {
+    for (let property in this) {
+      if (config[property]) {
         this[property] = config[property];
       }
     }
