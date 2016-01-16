@@ -4,7 +4,7 @@
 module.exports = {
   name: 'ember-ahoy',
   isDevelopingAddon: function() {
-    return true;
+    return process.env.ADDON_DEVELOPMENT === 'true';
   },
   included: function(app){
     this._super.included(app);
